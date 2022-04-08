@@ -1,6 +1,6 @@
 function updateDynamicCache(dynamicCache, request, response) {
     if (response.ok) {
-        return cache.open(dynamicCache)
+        return caches.open(dynamicCache)
             .then(cache => {
                 cache.put(request, response.clone())
 
