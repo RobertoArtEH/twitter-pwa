@@ -8,6 +8,7 @@ const APP_SHELL = [
     // '/',
     'index.html',
     'js/app.js',
+    "js/sw-acces.js",
     'css/style.css',
     'images/favico.ico',
     'images/avs/img1.png',
@@ -43,6 +44,10 @@ self.addEventListener('activate', event => {
             keys.forEach(key => {
                 if (key !== STATIC_CACHE && key.includes('static')) {
                     return caches.delete(key)
+                }
+
+                if (key !== DYNAMIC_CACHE && key.includes('dynamic')) {
+                    return caches.delete(key);
                 }
             })
         })
