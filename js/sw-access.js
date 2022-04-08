@@ -4,7 +4,7 @@ function updateDynamicCache(dynamicCache, request, response) {
             .then(cache => {
                 cache.put(request, response.clone())
 
-                return cache.clone()
+                return response.clone()
             })
     }
 
