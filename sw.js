@@ -8,7 +8,7 @@ const APP_SHELL = [
     // '/',
     'index.html',
     'js/app.js',
-    "js/sw-acces.js",
+    "js/sw-access.js",
     'css/style.css',
     'images/favico.ico',
     'images/avs/img1.png',
