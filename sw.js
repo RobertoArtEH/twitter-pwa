@@ -5,11 +5,11 @@ const DYNAMIC_CACHE = 'dynamic-v1'
 const INMUTABLE_CACHE = 'inmutable-v1'
 
 const APP_SHELL = [
-    './',
+    // './',
     'index.html',
+    'css/styles.css',
     'js/app.js',
-    "js/sw-access.js",
-    'css/style.css',
+    'js/sw-access.js',
     'images/favico.ico',
     'images/avs/img1.png',
     'images/avs/img2.png',
