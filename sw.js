@@ -62,4 +62,6 @@ self.addEventListener('fetch', event => {
                     return updateDynamicCache(DYNAMIC_CACHE, event.request, newRes)
                 })
         })
+
+    event.respondWith(response);
 })
