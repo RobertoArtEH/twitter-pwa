@@ -7,20 +7,20 @@ const INMUTABLE_CACHE = 'inmutable-v1'
 const APP_SHELL = [
     '/',
     'index.html',
-    '/js/app.js',
-    '/css/style.css',
-    '/images/favico.ico',
-    '/images/avs/img1.png',
-    '/images/avs/img2.png',
-    '/images/avs/img3.png',
-    '/images/avs/img4.png',
+    'js/app.js',
+    'css/style.css',
+    'images/favico.ico',
+    'images/avs/img1.png',
+    'images/avs/img2.png',
+    'images/avs/img3.png',
+    'images/avs/img4.png',
 ]
 
 const APP_INMUTABLE = [
     'https://netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css',
     'https://fonts.googleapis.com/css?family=Quicksand:300,400',
     'https://fonts.googleapis.com/css?family=Lato:400,300',
-    '/js/libs/jquery.js'
+    'js/libs/jquery.js'
 ]
 
 self.addEventListener('install', event => {
@@ -32,7 +32,6 @@ self.addEventListener('install', event => {
     const cacheInmutable = caches.open(INMUTABLE_CACHE)
         .then(cache => {
             cache.addAll(APP_INMUTABLE)
-
         })
 
     event.waitUntil(Promise.all([cacheStatic, cacheInmutable]))
